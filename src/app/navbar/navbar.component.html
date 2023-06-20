@@ -1,0 +1,59 @@
+<style>
+  nav {
+    background-color: #3b10d6; /* Set background color */
+    height: 60px; /* Set height */
+  }
+
+  .container {
+    max-width: 1200px; /* Set maximum width */
+    margin: 0 auto; /* Center the container */
+  }
+
+  .content {
+    display: flex; /* Use flexbox to align items */
+    justify-content: space-between; /* Space items out evenly */
+    align-items: center; /* Center items vertically */
+    height: 100%; /* Set height */
+  }
+
+  .logo {
+    color: #fff; /* Set text color */
+    font-size: 24px; /* Set font size */
+    font-weight: bold; /* Set font weight */
+  }
+
+  ul {
+    list-style: none; /* Remove list bullets */
+    margin: 0; /* Remove list margin */
+    padding: 0; /* Remove list padding */
+    display: flex; /* Use flexbox to align items */
+  }
+
+  li {
+    margin-left: 20px; /* Add left margin between items */
+  }
+
+  li a {
+    color: #fff; /* Set text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Set font size */
+    font-weight: bold; /* Set font weight */
+    padding: 0 10px; /* Add padding around text */
+    border-radius: 5px; /* Add rounded corners */
+    transition: all 0.2s ease; /* Add transition effect */
+  }
+
+  li a:hover {
+    background-color: #fff; /* Change background color on hover */
+    color: #333; /* Change text color on hover */
+  }
+</style>
+
+<nav>
+  <ul>
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/admin">Admin</a></li>
+    <li><a routerLink="/prof">Prof</a></li>
+    <li><a routerLink="/etudiant">Etudiant</a></li>
+  </ul>
+</nav>

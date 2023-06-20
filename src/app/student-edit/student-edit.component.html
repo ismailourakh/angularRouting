@@ -1,0 +1,54 @@
+<style>
+    /* CSS styles for the form */
+    .teacher-form {
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+    }
+  
+    .teacher-form label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  
+    .teacher-form input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+    }
+  
+    .teacher-form input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  
+    .teacher-form input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+  
+  <!-- HTML form for teacher information -->
+  <form class="teacher-form" (ngSubmit)="updateStudent(student.id, student.name, student.email)">
+    <label for="studentID">Teacher ID:</label>
+    <input type="text" id="studentID" name="studentID" [(ngModel)]="student.id" disabled>
+  
+    <label for="studentName">Student Name:</label>
+    <input type="text" id="studentName" name="studentName" [(ngModel)]="student.name">
+
+    <label for="studentNote">Student Note:</label>
+    <input type="text" id="studentNote" name="studentNote" [(ngModel)]="student.email">
+  
+    <input type="submit" value="Update">
+  </form>
+  

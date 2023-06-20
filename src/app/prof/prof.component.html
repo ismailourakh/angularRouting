@@ -1,0 +1,52 @@
+<style>
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  a:hover {
+    color: #0056b3;
+  }
+</style>
+<h2>Profs</h2>
+<ul>
+  <li *ngFor="let prof of profs">
+    <a routerLink="/admin/profs/{{ prof.id }}">{{ prof.name }}</a>
+    <br />
+  </li>
+</ul>
+
+<h2>Add Prof</h2>
+<form (ngSubmit)="addProf($event)">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      [(ngModel)]="prof.name"
+      name="name"
+      value="{{ name }}"
+      required
+      (input)="onChange($event)"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Add</button>
+</form>

@@ -1,0 +1,63 @@
+<style>
+  .prof-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .prof-table th,
+  .prof-table td {
+    padding: 12px;
+    text-align: left;
+  }
+
+  .prof-table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .prof-table td {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    background-color: #4caf50;
+    border: none;
+    color: #fff;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 8px;
+  }
+
+  .delete-btn {
+    background-color: #f44336;
+  }
+
+  .edit-btn:hover,
+  .delete-btn:hover {
+    opacity: 0.8;
+  }
+</style>
+
+<table class="prof-table">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Name</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ prof.id }}</td>
+      <td>{{ prof.name }}</td>
+      <td>
+        <button class="edit-btn" (click)="editProf(prof.id)">Edit</button>
+        <button class="delete-btn" (click)="deleteProf(prof.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
